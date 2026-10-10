@@ -134,7 +134,7 @@ function footer() {
       <p class="ftr__demo">${icon('info-circle')}Демо-версия сайта: компания, тексты, цифры и отзывы условные.</p>
     </div>
   </div>
-  <p class="ftr__word" aria-hidden="true">${site.name}</p>
+  <div class="ftr__word" aria-hidden="true" data-word="${site.name}"></div>
 </footer>`;
 }
 
@@ -696,6 +696,7 @@ ${pageHero({ trail, kicker: '146 сданных объектов', title: 'Пр�
       </div>
       <p class="filter__count" role="status" data-count-status>Показано ${projects.length} ${plural(projects.length, ['проект', 'проекта', 'проектов'])}</p>
     </div>
+    <h2 class="sr-only">Список проектов</h2>
     <ul class="pgrid" role="list" data-filter-list>${projects.map((p, i) => projCard(p, i, { lead: true })).join('')}</ul>
   </div>
 </section>
@@ -834,7 +835,7 @@ ${ctaBand('Станьте следующим заказчиком, которы�
     <li><a href="${u('zhurnal/')}"${cur === '' ? ' aria-current="page"' : ''}>Все материалы</a></li>
     ${rubrics.map((r) => `<li><a href="${u(`zhurnal/${r.slug}/`)}"${cur === r.slug ? ' aria-current="page"' : ''}>${r.title}</a></li>`).join('')}
   </ul></nav>`;
-  const listing = (list) => `<ul class="jlist" role="list">${list.map((a, i) => articleCard(a, i, i === 0 ? 'feat' : '')).join('')}</ul>`;
+  const listing = (list) => `<h2 class="sr-only">Материалы журнала</h2><ul class="jlist" role="list">${list.map((a, i) => articleCard(a, i, i === 0 ? 'feat' : '')).join('')}</ul>`;
 
   const trail = [['zhurnal/', 'Журнал']];
   addPage({

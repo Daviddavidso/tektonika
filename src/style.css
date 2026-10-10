@@ -876,6 +876,7 @@ html:not(.js) .chips, html:not(.js) .filter__l { display: none; }
   font-size: 21vw; font-weight: 700; line-height: .76; letter-spacing: -.065em;
   color: #1b1d21; transform: translateY(12%);
 }
+.ftr__word::before { content: attr(data-word); }
 
 /* ==========================================================================
    Responsive
