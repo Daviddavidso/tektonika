@@ -8,7 +8,7 @@ rm -rf .git
 git init -q
 git checkout -q -b gh-pages
 git add -A
-git commit -q -m "Deploy $(date '+%Y-%m-%d %H:%M')"
+git -c user.name=openclaw -c user.email=openclaw@MacBook-Pro-openclaw.local commit -q -m "Deploy $(date '+%Y-%m-%d %H:%M')"
 export GIT_TERMINAL_PROMPT=0
 git -c credential.helper= -c 'credential.helper=!gh auth git-credential' push -q -f https://github.com/Daviddavidso/tektonika.git gh-pages:gh-pages
 rm -rf .git
