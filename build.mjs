@@ -379,7 +379,7 @@ const faqLd = (items) => ({
   const words = ['Строим', '__pill__', 'объекты,', 'которые', 'работают', 'десятилетиями'];
   let wi = 0;
   const split = words.map((w) => w === '__pill__'
-    ? `<span class="w w--pill" style="--i:${wi++}"><span class="pill">${img('photo-1625082299956-faa4f627834b', { alt: '', ar: 2.4, widths: [240, 480], sizes: '240px', eager: true })}</span></span>`
+    ? `<span class="w w--pill" style="--i:${wi++}"><span class="pill">${img('photo-1557813282-bcd50093e38f', { alt: '', ar: 2.4, widths: [240, 480], sizes: '240px', eager: true })}</span></span>`
     : `<span class="w"><span style="--i:${wi++}">${w}</span></span>`).join(' ');
 
   const dirSizes = ['md', 'lg', 'sm', 'sm', 'sm', 'wide'];
