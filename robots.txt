@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://daviddavidso.github.io/tektonika/sitemap.xml
